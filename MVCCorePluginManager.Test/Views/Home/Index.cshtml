@@ -1,0 +1,21 @@
+﻿@using MVCCorePluginManager
+@{
+    ViewData["Title"] = "Home Page";
+
+    var testPlugin1Module = PluginManager.GetModule("Plugins.TestPlugin1");
+    var testPlugin2Module = PluginManager.GetModule("Plugins.TestPlugin2");
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@if (testPlugin1Module != null)
+{
+    <li>@Html.ActionLink(testPlugin1Module.Title, "Index", testPlugin1Module.EntryControllerName)</li>
+}
+@if (testPlugin2Module != null)
+{
+    <li>@Html.ActionLink(testPlugin2Module.Title, "Index", testPlugin2Module.EntryControllerName)</li>
+}
