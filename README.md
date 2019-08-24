@@ -34,7 +34,7 @@ Example:
         }
     }
 
-The most important part in this interface is EntryControllerName. We are specify the main controller for this plugin. This is the plugin's entry point. After create this controller, you can define anything you want. It will run like inside of main project.
+The most important part in this interface is EntryControllerName. We are specify the main controller for this plugin. This is the plugin's entry point. After create this controller, you can define anything you want. It will run like from inside of the main project.
 
 Already Core v2.x compiles the views, you will get two dlls. If you don't have any view, then you will get only one.
 
@@ -59,15 +59,15 @@ Also, we have to change our Program.cs little bit like this:
                 .UseStartup<Startup>();
         }
 
-We are doing this because, after every plugin added or removed, we are stopping the application. But after that, the application starts automatically.
+We are doing this because, after every plugin added or removed, the application should be restart. With this code, it restarts automatically.
 
-To do this, you have to use ApplicationManager.RunAsync method. Without doing this, after any plugin changing process, the application stops and when we do any request, we'll see an error page.
+If we don't change the code like this, after any plugin changing process, the application stops and when we do any request, we'll see an error page.
 
 Section 3:
 
-Now, it's time to use plugin in any page.
+Now, it's time to use the plugin in any page.
 
-To do that, we request plugin with it's name in view's code block and then adding in html block
+To do that, we request the plugin with it's name in view's code block and then adding in html block
 
     @{
         var testPluginModule = PluginManager.GetModule("Plugins.TestPlugin"); // Your plugin assembly name without extension.
@@ -78,7 +78,7 @@ To do that, we request plugin with it's name in view's code block and then addin
         @Html.ActionLink(testPluginModule.Title, "Index", testPluginModule.EntryControllerName)
     }
 
-On code, all we have to do these.
+On code, all we have to do are these.
 
 Section 4:
 
