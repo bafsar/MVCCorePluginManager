@@ -82,10 +82,10 @@ On code, all we have to do are these.
 
 Section 4:
 
-Finally, we can add or remove plugins. Just you have to do, adding assemblies in Plugins folder or removing from it. Plugins folder is in root of the project.
+Finally, we can add or remove plugins. Just you have to do, adding assemblies in Plugins folder or removing from it. Plugins folder is on the root of the project.
 
-Also, if you want you can add plugins in their ow -n folders. With this way, you can be more organized...
+Also, if you want you can add plugins in their own folders. With this way, you code can be more organized...
 
 Don't remember to give write permission for Plugins folder!
 
-Example: https://test3.bilalafsar.com
+Also, you can look to example on https://test3.bilalafsar.com
