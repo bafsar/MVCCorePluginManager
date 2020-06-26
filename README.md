@@ -67,7 +67,7 @@ Section 3:
 
 Now, it's time to use the plugin in any page.
 
-To do that, we request the plugin with it's name in view's code block and then adding in html block
+To do that, we request the plugin with its name in view's code block and then adding in html block
 
     @{
         var testPluginModule = PluginManager.GetModule("Plugins.TestPlugin"); // Your plugin assembly name without extension.
@@ -88,4 +88,4 @@ Also, if you want you can add plugins in their own folders. With this way, your 
 
 Remember to give write permission for Plugins folder!
 
-Also, you can look to example on https://test3.bilalafsar.com
+Also, you can look at the example on https://test3.bilalafsar.com
